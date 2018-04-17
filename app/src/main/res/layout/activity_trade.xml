@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TradeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large_margin_size"
+                android:layout_marginLeft="@dimen/small_margin_size"
+                android:textSize="@dimen/textview_text_size"
+                android:text="@string/open_mode" />
+
+            <RadioGroup
+                android:id="@+id/rg_tradeOpenMode"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_margin_size"
+                android:layout_marginRight="@dimen/small_margin_size">
+
+                <RadioButton
+                    android:id="@+id/rb_tradeOpenModeDefault"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_weight="1"
+                    android:onClick="onCheckTradeOpenModeDefault"
+                    android:text="@string/open_mode_default" />
+
+                <RadioButton
+                    android:id="@+id/rb_tradeOpenModeH5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onCheckTradeOpenModeH5"
+                    android:text="@string/open_mode_h5" />
+
+                <RadioButton
+                    android:id="@+id/rb_tradeOpenModeTaobao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onCheckTradeOpenModeTaobao"
+                    android:text="@string/open_mode_taobao" />
+
+                <RadioButton
+                    android:id="@+id/rb_tradeOpenModeTMall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onCheckTradeOpenModeTMall"
+                    android:text="@string/open_mode_tmall" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin_size"
+                android:layout_marginLeft="@dimen/small_margin_size"
+                android:textSize="@dimen/textview_text_size"
+                android:text="@string/commodity_type" />
+
+            <RadioGroup
+                android:id="@+id/rg_commodityType"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_margin_size"
+                android:layout_marginRight="@dimen/small_margin_size">
+
+                <RadioButton
+                    android:id="@+id/rb_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_weight="1"
+                    android:onClick="onCheckCommonCommodity"
+                    android:text="@string/common_commodity" />
+
+                <RadioButton
+                    android:id="@+id/rb_taoke"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onCheckTaokeCommodity"
+                    android:text="@string/taoke_commodity" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/small_margin_size"
+                android:background="@drawable/linearlayout_shape">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_margin_size"
+                    android:textSize="@dimen/textview_text_size"
+                    android:text="@string/input_url" />
+
+                <EditText
+                    android:id="@+id/et_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btn_showUrl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/small_margin_size"
+                    android:onClick="showUrl"
+                    android:text="@string/open_url" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_margin_size"
+                android:background="@drawable/linearlayout_shape">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textview_text_size"
+                    android:layout_marginTop="@dimen/small_margin_size"
+                    android:text="@string/commodity_id_whether_confuse"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_confusion"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rb_notConfuse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:layout_weight="1"
+                        android:onClick="onCheckNotConfuse"
+                        android:text="@string/not_confuse" />
+
+                    <RadioButton
+                        android:id="@+id/rb_confuse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="onCheckConfuse"
+                        android:text="@string/confuse" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_margin_size"
+                    android:textSize="@dimen/textview_text_size"
+                    android:text="@string/input_commodity_id"/>
+
+                <EditText
+                    android:id="@+id/et_commodityId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btn_showCommodityDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/small_margin_size"
+                        android:onClick="showCommodityDetail"
+                        android:text="@string/open_commodity_detail_page" />
+
+                    <Button
+                        android:id="@+id/btn_addCommodityToCart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/small_margin_size"
+                        android:onClick="addCommodityToCart"
+                        android:text="@string/add_commodity_to_cart" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/small_margin_size"
+                android:background="@drawable/linearlayout_shape">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textview_text_size"
+                    android:layout_marginTop="@dimen/small_margin_size"
+                    android:text="@string/input_shop_id" />
+
+                <EditText
+                    android:id="@+id/et_shopId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btn_showShop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/small_margin_size"
+                    android:onClick="showShop"
+                    android:text="@string/open_shop" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

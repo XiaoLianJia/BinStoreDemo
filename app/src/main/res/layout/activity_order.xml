@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_margin_size"
+        android:layout_marginLeft="@dimen/small_margin_size"
+        android:textSize="@dimen/textview_text_size"
+        android:text="@string/open_mode"/>
+
+    <RadioGroup
+        android:id="@+id/rg_OrderOpenMode"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rb_orderOpenModeDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_weight="1"
+            android:onClick="onCheckOrderOpenModeDefault"
+            android:text="@string/open_mode_default" />
+
+        <RadioButton
+            android:id="@+id/rb_orderOpenModeH5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckOrderOpenModeH5"
+            android:text="@string/open_mode_h5" />
+
+        <RadioButton
+            android:id="@+id/rb_orderOpenModeTaobao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckOrderOpenModeTaobao"
+            android:text="@string/open_mode_taobao" />
+
+        <RadioButton
+            android:id="@+id/rb_orderOpenModeTMall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckOrderOpenModeTMall"
+            android:text="@string/open_mode_tmall" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_margin_size"
+        android:layout_marginLeft="@dimen/small_margin_size"
+        android:textSize="@dimen/textview_text_size"
+        android:text="@string/order_type" />
+
+    <RadioGroup
+        android:id="@+id/rg_orderTyp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rb_orderAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_weight="1"
+            android:onClick="onCheckOrderAll"
+            android:text="@string/order_all" />
+
+        <RadioButton
+            android:id="@+id/rb_orderToPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckOrderToPay"
+            android:text="@string/order_to_pay" />
+
+        <RadioButton
+            android:id="@+id/rb_orderToSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckOrderToSend"
+            android:text="@string/order_to_send" />
+
+        <RadioButton
+            android:id="@+id/rb_orderToReceive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckOrderToReceive"
+            android:text="@string/order_to_receive" />
+
+        <RadioButton
+            android:id="@+id/rb_orderToComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckOrderToComment"
+            android:text="@string/order_to_comment" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_showOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_margin_size"
+        android:layout_marginLeft="@dimen/small_margin_size"
+        android:layout_marginRight="@dimen/small_margin_size"
+        android:onClick="showOrder"
+        android:text="@string/show_order" />
+
+    <Button
+        android:id="@+id/btn_showOrderAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_margin_size"
+        android:layout_marginLeft="@dimen/small_margin_size"
+        android:layout_marginRight="@dimen/small_margin_size"
+        android:onClick="showOrder"
+        android:text="@string/show_order_all" />
+
+    <Button
+        android:id="@+id/btn_showCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_margin_size"
+        android:layout_marginLeft="@dimen/small_margin_size"
+        android:layout_marginRight="@dimen/small_margin_size"
+        android:onClick="showCart"
+        android:text="@string/show_cart" />
+</LinearLayout>

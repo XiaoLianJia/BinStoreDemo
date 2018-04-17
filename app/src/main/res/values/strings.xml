@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">BinStore</string>
+
+    <!-- MainActivity -->
+    <string name="login">登录</string>
+    <string name="logout">退出登录</string>
+    <string name="trade">电商交易</string>
+    <string name="mine">订单与购物车</string>
+    <string name="webview">WebView代理</string>
+
+    <!-- TradeActivity -->
+    <string name="open_mode">打开方式：</string>
+    <string name="open_mode_default">默认方式</string>
+    <string name="open_mode_h5">H5</string>
+    <string name="open_mode_taobao">手淘</string>
+    <string name="open_mode_tmall">天猫</string>
+
+    <string name="commodity_type">商品类型:</string>
+    <string name="common_commodity">普通商品</string>
+    <string name="taoke_commodity">淘客商品</string>
+
+    <string name="input_url">请输入URL：</string>
+    <string name="open_url">打开URL</string>
+
+    <string name="commodity_id_whether_confuse">商品id是否混淆：</string>
+    <string name="not_confuse">不混淆</string>
+    <string name="confuse">混淆</string>
+
+    <string name="input_commodity_id">请输入商品id：</string>
+    <string name="open_commodity_detail_page">打开商品详情页</string>
+    <string name="add_commodity_to_cart">添加商品到购物车</string>
+
+    <string name="input_shop_id">请输入店铺id：</string>
+    <string name="open_shop">打开店铺</string>
+
+    <!-- OrderActivity -->
+    <string name="order_type">订单页面参数（仅在H5打开方式下有效）：</string>
+    <string name="order_all">全部</string>
+    <string name="order_to_pay">待付款</string>
+    <string name="order_to_send">待发货</string>
+    <string name="order_to_receive">待收货</string>
+    <string name="order_to_comment">待评价</string>
+
+    <string name="show_order">分域显示我的订单</string>
+    <string name="show_order_all">全部显示我的订单</string>
+    <string name="show_cart">显示我的购物车</string>
+
+</resources>
